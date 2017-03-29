@@ -3,7 +3,7 @@ title: 'Ben Gelens'
 description: 'Automation, Development & Cloud'
 url: 'http://bgelens.github.io'
 baseurl: '/'
-# google_analytics: 'UA-XXXXXX-X'
+google_analytics: 'UA-96454014-1'
 disqus_shortname: 'bgelens-nl'
 
 author:
