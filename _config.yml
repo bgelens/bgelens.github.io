@@ -1,0 +1,43 @@
+# Site settings
+title: 'Ben Gelens'
+description: 'Automation, Development & Cloud'
+url: 'http://bgelens.github.io'
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Ben Gelens'
+  email: ben@bgelens.nl
+  twitter_username: bgelens
+  facebook_username: bgelens
+  github_username:  bgelens
+  linkedin_username:  ben-gelens-mvp-06407b22
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+pages_list:
+  Home: '/'
+  About: '/about/'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:title/
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
