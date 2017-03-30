@@ -197,7 +197,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-redirect-from
-  rouge
 
 BUNDLED WITH
    1.14.6
