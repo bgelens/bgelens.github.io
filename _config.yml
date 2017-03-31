@@ -26,6 +26,7 @@ pages_list:
   Home: '/'
   About: '/about/'
   Tags: '/tags/'
+  Categories: '/categories/'
   
 
 # Build settings

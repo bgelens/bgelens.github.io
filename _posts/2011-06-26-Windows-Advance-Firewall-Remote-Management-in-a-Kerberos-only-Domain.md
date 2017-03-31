@@ -1,8 +1,8 @@
 ---
 title:  "Windows Advanced Firewall Remote Management in a Kerberos only Domain"
 date:   2011-06-26 12:00:00
-categories: ["Ben Gelens","Windows Server"]
-tags: ["Ben Gelens","Kerberos","Windows Server","Windows Advanced Firewall","Windows Firewall","NTLM"]
+categories: ["Windows Server","Active Directory"]
+tags: ["Kerberos","Windows Server","Windows Advanced Firewall","Windows Firewall","NTLM"]
 ---
 I know not a lot of people created or transitioned to a forest/domain which expelled NTLM in total, but I know for sure when time will progress a lot more people will take this step.
 When the time comes and you’ll take the small step for men, but giant step for your authentication security you’ll be confronted with some nasty bugs of which I will highlight one in this post.

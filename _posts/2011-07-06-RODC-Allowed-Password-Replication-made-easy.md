@@ -1,8 +1,8 @@
 ---
 title:  "RODC Allowed Password Replication made easy!"
 date:   2011-07-06 12:00:00
-categories: ["Ben Gelens","Windows Server"]
-tags: ["Ben Gelens","RODC","Windows Server","Active Directory","PowerShell"]
+categories: ["Active Directory"]
+tags: ["RODC","Windows Server","Active Directory","PowerShell"]
 ---
 What is the use of a RODC in an environment that is totally centralized in a data center?
 Answer: A highly controllable and secure authentication (proxy) for remote users!
