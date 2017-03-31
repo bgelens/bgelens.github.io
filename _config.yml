@@ -25,6 +25,8 @@ defaults:
 pages_list:
   Home: '/'
   About: '/about/'
+  Tags: '/tags/'
+  
 
 # Build settings
 destination: _site
