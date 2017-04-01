@@ -31,7 +31,7 @@ pages_list:
 
 # Build settings
 destination: _site
-paginate: 10
+paginate: 5
 permalink: /:title/
 markdown: kramdown
 highlighter: rouge
