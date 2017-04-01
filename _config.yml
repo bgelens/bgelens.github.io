@@ -1,7 +1,7 @@
 # Site settings
 title: 'Ben Gelens'
 description: 'Automation, Development & Cloud'
-url: 'http://bgelens.github.io'
+url: 'http://bgelens.nl'
 baseurl: '/'
 google_analytics: 'UA-96454014-1'
 disqus_shortname: 'bgelens-nl'
