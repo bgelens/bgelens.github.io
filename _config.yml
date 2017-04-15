@@ -27,6 +27,7 @@ pages_list:
   About: '/about/'
   Tags: '/tags/'
   Categories: '/categories/'
+  Videos: '/video/'
   
 
 # Build settings
