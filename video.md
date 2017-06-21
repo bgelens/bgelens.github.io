@@ -2,7 +2,11 @@
 title: "Videos"
 layout: page
 ---
-#### 05/4/2017: Start-NewEra -Repo PowerShell
+
+#### 05/05/2017: What to do when inbox DSC Resources don't cover your goal
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kux5pIe9ZLI" frameborder="0" allowfullscreen></iframe>
+
+#### 05/04/2017: Start-NewEra -Repo PowerShell
 <iframe width="560" height="315" src="https://www.youtube.com/embed/50xLm7J_dsM" frameborder="0" allowfullscreen></iframe>
 
 #### 05/16/2016: Azure Automation DSC (Part 1) with Aleksandar Nikolic
