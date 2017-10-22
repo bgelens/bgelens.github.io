@@ -15,7 +15,7 @@ I'm planning to check out the following CM tools as part of this series:
 
 Index:
 
-* [Part 1: Chef intro]()
+* [Part 1: Chef intro](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-1-chef-intro)
 
 I'll work from DSC perspective as that is what I know. (e.g. Pull server model, authoring / staging / enact stage, etc and see where I'll end up). If you are more familiar than me with the CM tooling discussed, please excuse me if I'm understating or misdiscribing the functionality while comparing with DSC (I just don't know any better yet). The goal is to see where and how any of these tools (can) extent DSC or make use of DSC to be more flexible, capable, robust, etc.
 
@@ -29,7 +29,7 @@ So let's get started with the first post on using Chef in combination with DSC.
 
 ![chef_logo](/images/2017-09/chef_logo.png){: height="200px"}
 
-At the heart of Chef is the [chef client](https://docs.chef.io/chef_client_overview.html){:target="_blank"} which is the engine that does all the heavy lifting. You can compare it a bit with the Local Configuration Manager when talking about DSC. Normally it will operate in conjunction with a [chef server](https://docs.chef.io/server_components.html){:target="_blank"} implementation which you can view as the DSC Pull Server or Azure Automation DSC. From first look the chef server is a nice and rich manageable solution. It is free in usage until 5 nodes and there is also the hosted chef solution which is a PaaS offering with most of the functionality of chef server without the hassle of maintaining infrastructure and such.
+At the heart of Chef is the [chef client](https://docs.chef.io/chef_client_overview.html){:target="_blank"} which is the engine that does all the heavy lifting. You can compare it a bit with the Local Configuration Manager when talking about DSC. Normally it will operate in conjunction with a [chef server](https://docs.chef.io/server_components.html){:target="_blank"} implementation which you can view as the DSC Pull Server or Azure Automation DSC. From first look the chef server is a nice and rich manageable solution. There is also the hosted chef solution which is a PaaS offering with most of the functionality of chef server without the hassle of maintaining infrastructure and such.
 
 When comparing with DSC we have found relations with the staging (chef server) and enacting / reporting (chef client) phase. What about the authoring? Authoring, as with DSC, is the process of manipulating text files to declare the end state of a node. In the case of chef it's done in ruby. Chef provides what is known as the ChefDK which is a toolset to help you out with authoring, staging, bootstrapping (have a chef-client installed on a remote node and have it register with a chef server in one go) and so on. At the hard of the ChefDK is a tool called knife which will become familiar to you very quickly.
 
