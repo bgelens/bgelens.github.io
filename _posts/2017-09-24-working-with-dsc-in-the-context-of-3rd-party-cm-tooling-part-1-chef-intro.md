@@ -16,6 +16,7 @@ I'm planning to check out the following CM tools as part of this series:
 Index:
 
 * [Part 1: Chef intro](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-1-chef-intro)
+* [Part 2: Chef notifications](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-2-chef-notifications/)
 
 I'll work from DSC perspective as that is what I know. (e.g. Pull server model, authoring / staging / enact stage, etc and see where I'll end up). If you are more familiar than me with the CM tooling discussed, please excuse me if I'm understating or misdiscribing the functionality while comparing with DSC (I just don't know any better yet). The goal is to see where and how any of these tools (can) extent DSC or make use of DSC to be more flexible, capable, robust, etc.
 
@@ -168,7 +169,7 @@ So we specify we want to use the ```dsc_resource``` resource and it has to have 
 
 Let's apply this recipe.
 
-```ruby
+```powershell
 chef-client --local-mode .\dsc01.rb
 ```
 
