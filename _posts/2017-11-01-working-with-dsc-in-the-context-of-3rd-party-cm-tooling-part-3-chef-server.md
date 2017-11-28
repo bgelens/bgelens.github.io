@@ -12,6 +12,7 @@ Index:
 * [Part 1: Chef intro](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-1-chef-intro)
 * [Part 2: Chef notifications](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-2-chef-notifications/)
 * [Part 3: Chef server](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-3-chef-server/)
+* [Part 4: Chef bootstrapping](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-4-chef-bootstrap/)
 
 First let's setup a Chef server. We have to option to go with our own Chef server or with hosted Chef. We go with hosted Chef for now as it's way easier to get started and I don't think setting up our own will actually help with what we are trying to figure out.
 Go to [https://manage.chef.io/signup/](https://manage.chef.io/signup/){:target="_blank"} and sign up for a trial account.
