@@ -21,6 +21,7 @@ Index:
 * [Part 4: Chef bootstrapping](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-4-chef-bootstrap/)
 * [Part 5: Chef client settings](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-5-chef-clientsettings/)
 * [Part 6: Puppet intro](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-6-puppet-intro/)
+* [Part 7: Puppet notifications](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-7-puppnotificationset/)
 
 I'll work from DSC perspective as that is what I know. (e.g. Pull server model, authoring / staging / enact stage, etc and see where I'll end up). If you are more familiar than me with the CM tooling discussed, please excuse me if I'm understating or misdiscribing the functionality while comparing with DSC (I just don't know any better yet). The goal is to see where and how any of these tools (can) extent DSC or make use of DSC to be more flexible, capable, robust, etc.
 
