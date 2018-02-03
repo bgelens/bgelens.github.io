@@ -16,6 +16,7 @@ Index:
 * [Part 5: Chef client settings](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-5-chef-clientsettings/)
 * [Part 6: Puppet intro](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-6-puppet-intro/)
 * [Part 7: Puppet notifications](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-7-puppnotificationset/)
+* [Part 8: Puppet server](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-8-puppet-server/)
 
 First let's setup a Chef server. We have to option to go with our own Chef server or with hosted Chef. We go with hosted Chef for now as it's way easier to get started and I don't think setting up our own will actually help with what we are trying to figure out.
 Go to [https://manage.chef.io/signup/](https://manage.chef.io/signup/){:target="_blank"} and sign up for a trial account.
