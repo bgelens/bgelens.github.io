@@ -23,6 +23,7 @@ Index:
 * [Part 6: Puppet intro](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-6-puppet-intro/)
 * [Part 7: Puppet notifications](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-7-puppnotificationset/)
 * [Part 8: Puppet server](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-8-puppet-server/)
+* [Part 9: Puppet Modules, Roles and more](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-9-puppet-modules_roles_and_more/)
 
 I'll work from DSC perspective as that is what I know. (e.g. Pull server model, authoring / staging / enact stage, etc and see where I'll end up). If you are more familiar than me with the CM tooling discussed, please excuse me if I'm understating or misdiscribing the functionality while comparing with DSC (I just don't know any better yet). The goal is to see where and how any of these tools (can) extent DSC or make use of DSC to be more flexible, capable, robust, etc.
 
