@@ -18,6 +18,7 @@ Index:
 * [Part 7: Puppet notifications](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-7-puppnotificationset/)
 * [Part 8: Puppet server](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-8-puppet-server/)
 * [Part 9: Puppet Modules, Roles and more](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-9-puppet-modules_roles_and_more/)
+* [Part 10: Puppet bootstrap](http://bgelens.nl/working-with-dsc-in-the-context-of-3rd-party-cm-tooling-part-10-puppet-bootstrap/)
 
 The scenario is, something changes in one resource and to effectuate the change, a service or process needs to cycle / reload (e.g. the configuration file of the docker daemon is changed and now the docker daemon needs to restart).
 
