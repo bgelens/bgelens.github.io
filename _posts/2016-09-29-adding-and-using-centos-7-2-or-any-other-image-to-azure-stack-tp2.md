@@ -1,8 +1,8 @@
 ---
 title:  "Adding and using CentOS 7.2 (or any other image) to Azure Stack TP2"
 date:   2016-09-29 12:00:00
-categories: ["AzureStack","MAS","Linux","Desired State Configuration"]
-tags: ["AzureStack","MAS","Linux","Desired State Configuration"]
+categories: ["AzureStack","MAS","Linux"]
+tags: ["AzureStack","MAS","Linux"]
 ---
 
 This blog post is written and published on AzureStack.blog: [https://azurestack.blog/2016/09/adding-and-using-centos-7-2-or-any-other-image-to-azure-stack-tp2/](https://azurestack.blog/2016/09/adding-and-using-centos-7-2-or-any-other-image-to-azure-stack-tp2/){:target="_blank"}
