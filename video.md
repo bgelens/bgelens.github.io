@@ -3,6 +3,9 @@ title: "Videos"
 layout: page
 ---
 
+#### 04/19/2018: DSC in a Configuration Management tool world
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yc_KjTzBdSA" frameborder="0" allowfullscreen></iframe>
+
 #### 05/05/2017: What to do when inbox DSC Resources don't cover your goal
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kux5pIe9ZLI" frameborder="0" allowfullscreen></iframe>
 
