@@ -17,7 +17,7 @@ Adding and using…
 * [OS Gallery Items to Azure Stack TP2](https://bgelens.nl/adding-and-using-os-gallery-items-to-azure-stack-tp2/)
 * [The DSC For Linux extension v2 to Azure Stack TP2](https://bgelens.nl/adding-and-using-the-dsc-for-linux-extension-v2-to-azure-stack-tp2/)
 * DSC For Linux Gallery Item to Azure Stack TP2 (this post)
-* [DSC For Linux Azure Automation DSC Gallery Item to Azure Stack TP2]()
+* [DSC For Linux Azure Automation DSC Gallery Item to Azure Stack TP2](https://bgelens.nl/adding-and-using-dsc-for-linux-azure-automation-dsc-gallery-item-to-azure-stack-tp2/)
 
 # VM Extension Gallery Item
 

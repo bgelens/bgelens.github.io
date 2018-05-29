@@ -17,9 +17,9 @@ Adding and using…
 
 * [CentOS 7.2 (or any other image) to Azure Stack TP2](https://bgelens.nl/adding-and-using-centos-7-2-or-any-other-image-to-azure-stack-tp2/)
 * OS Gallery Items to Azure Stack TP2 (this post)
-* [The DSC For Linux extension v2 to Azure Stack TP2]()
-* [DSC For Linux Gallery Item to Azure Stack TP2]()
-* [DSC For Linux Azure Automation DSC Gallery Item to Azure Stack TP2]()
+* [The DSC For Linux extension v2 to Azure Stack TP2](https://bgelens.nl/adding-and-using-the-dsc-for-linux-extension-v2-to-azure-stack-tp2/)
+* [DSC For Linux Gallery Item to Azure Stack TP2](https://bgelens.nl/adding-and-using-dsc-for-linux-gallery-item-to-azure-stack-tp2/)
+* [DSC For Linux Azure Automation DSC Gallery Item to Azure Stack TP2](https://bgelens.nl/adding-and-using-dsc-for-linux-azure-automation-dsc-gallery-item-to-azure-stack-tp2/)
 
 # Creating a gallery item
 

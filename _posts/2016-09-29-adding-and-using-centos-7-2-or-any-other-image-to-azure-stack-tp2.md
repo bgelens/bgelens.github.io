@@ -12,10 +12,10 @@ Finally, Azure Stack TP2 has been released! When TP1 came out I wrote a couple o
 Adding and using…
 
 * CentOS 7.2 (or any other image) to Azure Stack TP2 (this post)
-* [OS Gallery Items to Azure Stack TP2]()
-* [The DSC For Linux extension v2 to Azure Stack TP2]()
-* [DSC For Linux Gallery Item to Azure Stack TP2]()
-* [DSC For Linux Azure Automation DSC Gallery Item to Azure Stack TP2]()
+* [OS Gallery Items to Azure Stack TP2](https://bgelens.nl/adding-and-using-os-gallery-items-to-azure-stack-tp2/)
+* [The DSC For Linux extension v2 to Azure Stack TP2](https://bgelens.nl/adding-and-using-the-dsc-for-linux-extension-v2-to-azure-stack-tp2/)
+* [DSC For Linux Gallery Item to Azure Stack TP2](https://bgelens.nl/adding-and-using-dsc-for-linux-gallery-item-to-azure-stack-tp2/)
+* [DSC For Linux Azure Automation DSC Gallery Item to Azure Stack TP2](https://bgelens.nl/adding-and-using-dsc-for-linux-azure-automation-dsc-gallery-item-to-azure-stack-tp2/)
 
 In this blog series, assume I’m working from the Admin perspective unless explicitly specified I’m using a tenant account.
 
