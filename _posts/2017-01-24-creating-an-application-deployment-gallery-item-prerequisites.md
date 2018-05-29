@@ -16,7 +16,7 @@ I’m happy to say that all the efforts I had to put in reverse engineering and 
 Welcome to the first blog post (of 2) on this subject. Covering my research as a step by step guide for building an SQL Server 2016 solution exposed as Gallery Item running on Windows Server 2016 Core.
 
 * Part 1 – Prerequisites (this post)
-* [Part 2 – SQL Gallery item]()
+* [Part 2 – SQL Gallery item](https://bgelens.nl/creating-an-application-deployment-gallery-item-sql-gallery-item/)
 
 # Breakdown
 

@@ -9,7 +9,7 @@ This blog post is written and published on AzureStack.blog: [https://azurestack.
 
 Welcome to the second blog post (of 2) on creating a complex application deployment gallery item.
 
-* [Part 1 – Prerequisites]()
+* [Part 1 – Prerequisites](https://bgelens.nl/creating-an-application-deployment-gallery-item-prerequisites/)
 * Part 2 – SQL Gallery item (this post)
 
 Now we got all fundamentals in place, we need a deployment template to thigh everything together into a deployable artefact and expose that to the portal via a Gallery Item.
