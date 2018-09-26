@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="main-post-list">
+
+  <ol>
+    {% for post in site.posts %}
+      <li>
+        <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+      </li>
+    {% endfor %}
+  </ol>
+
+  <hr class="post-list__divider ">
+
+</div>

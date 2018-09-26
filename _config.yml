@@ -23,10 +23,8 @@ defaults:
         layout: 'post'
 
 pages_list:
-  Home: '/'
   About: '/about/'
-  Tags: '/tags/'
-  Categories: '/categories/'
+  Index: '/index2'
   Videos: '/video/'
   
 
