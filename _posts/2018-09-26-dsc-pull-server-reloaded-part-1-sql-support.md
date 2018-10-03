@@ -13,6 +13,7 @@ Windows Server 1803 ([Semi-Annual Channel release](https://docs.microsoft.com/en
 Index:
 
 * Part 1: SQL Support (this post)
+* Part 2: [Managing the Pull Server with DSCPullServerAdmin](https://bgelens.nl/dsc-pull-server-reloaded-part-2-managing-the-pull-server-with-dscpullserveradmin)
 
 # SQL Support
 
