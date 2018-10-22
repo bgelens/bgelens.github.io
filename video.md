@@ -3,6 +3,9 @@ title: "Videos"
 layout: page
 ---
 
+#### 10/19/2018: The DSC Pull Server reloaded
+<iframe id="ls_embed_1540225786" src="https://livestream.com/accounts/26955461/events/8418668/videos/182068401/player?width=560&height=315&enableInfo=true&defaultDrawer=&autoPlay=true&mute=false" width="560" height="315" frameborder="0" scrolling="no" allowfullscreen> </iframe>
+
 #### 04/19/2018: DSC in a Configuration Management tool world
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yc_KjTzBdSA" frameborder="0" allowfullscreen></iframe>
 
