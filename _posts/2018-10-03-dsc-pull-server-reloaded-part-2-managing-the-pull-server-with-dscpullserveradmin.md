@@ -17,6 +17,7 @@ Index:
 * [Part 1: SQL Support](https://bgelens.nl/dsc-pull-server-reloaded-part-1-sql-support)
 * Part 2: Managing the Pull Server with DSCPullServerAdmin (this post)
 * [Part 3: Pre-create the Pull Server database](https://bgelens.nl/dsc-pull-server-reloaded-part-3-precreate-pull-server-database)
+* [Part 4: Migrate EDB or MDB to SQL](https://bgelens.nl/dsc-pull-server-reloaded-part-4-migrate-edb-mdb-to-sql)
 
 # Onboarding a new node
 
