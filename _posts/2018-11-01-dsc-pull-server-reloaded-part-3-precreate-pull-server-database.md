@@ -18,6 +18,7 @@ Index:
 * [Part 2: Managing the Pull Server with DSCPullServerAdmin](https://bgelens.nl/dsc-pull-server-reloaded-part-2-managing-the-pull-server-with-dscpullserveradmin)
 * Part 3: Pre-create the Pull Server database (this post)
 * [Part 4: Migrate EDB or MDB to SQL](https://bgelens.nl/dsc-pull-server-reloaded-part-4-migrate-edb-mdb-to-sql)
+* [Part 5: Containers!](https://bgelens.nl/dsc-pull-server-reloaded-part-5)
 
 # Creating Azure SQL DSC Pull Server Database
 
