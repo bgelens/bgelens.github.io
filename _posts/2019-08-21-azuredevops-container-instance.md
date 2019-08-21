@@ -1,5 +1,5 @@
 ---
-title:  "Azure ARM Linked Templates and Complete mode"
+title:  "Azure DevOps Agents as Container Instances"
 date:   2019-08-21 12:00:00
 categories: ["Azure","ARM","AzureDevOps","Docker","PowerShell","ACI"]
 tags: ["Azure","ARM","AzureDevOps","Docker","PowerShell","ACI"]
