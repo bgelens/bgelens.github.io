@@ -6,7 +6,7 @@ tags: ["Azure","ARM","AzureDevOps","Docker","PowerShell","ACI"]
 excerpt_separator: <!--more-->
 ---
 
-The Microsoft provided hosted build agents for Azure DevOps might not suite all requirements. E.g. the Az PowerShell modules on the images provided by Microsoft are lagging behind. To compensate, in general pipelines spend a lot of time installing dependencies to complete the job at hand. Having a custom build agent can resolves these issues as the dependencies are installed at image creation and available from there on, thus these beter suite your needs (build for purpose).
+The Microsoft provided hosted build agents for Azure DevOps might not suite all requirements. E.g. the Az PowerShell modules on the images provided by Microsoft are lagging behind. To compensate, in general, pipelines spend a lot of time installing dependencies to complete the job at hand. Having a custom build agent can resolves these issues as the dependencies are installed at image creation and available from there on, thus these images beter suite your needs (build for purpose).
 
 You can host build agents on any compute platform. For this solution we build docker images and host them on Azure Container Instances as it is relatively easy to create container images containing all the requirements compared to VMs. It is also far easier creating new versions as the creation of the image is fully automated.
 
@@ -14,7 +14,7 @@ You can host build agents on any compute platform. For this solution we build do
 
 ## Create Agent Pool
 
-To create an Agent Pool please follow the [documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/pools-queues?view=azure-devops#creating-agent-pools).
+To create an Agent Pool please follow the [documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/pools-queues?view=azure-devops#creating-agent-pools){:target="_blank"}.
 
 ## Build container image
 
@@ -22,9 +22,9 @@ For this blog we'll create images for both Windows and Linux.
 
 ### Linux
 
-The image run commands are based on the [Linux Azure DevOps agent guide](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-linux?view=azure-devops).
+The image run commands are based on the [Linux Azure DevOps agent guide](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-linux?view=azure-devops){:target="_blank"}.
 
-The Linux image is based on `mcr.microsoft.com/powershell:6.2.0-ubuntu-18.04` which is an Ubuntu 18.04 image with PowerShell Core 6.2 pre-installed managed by Microsoft (see [DockerHub](https://hub.docker.com/_/microsoft-powershell) for more info).
+The Linux image is based on `mcr.microsoft.com/powershell:6.2.0-ubuntu-18.04` which is an Ubuntu 18.04 image with PowerShell Core 6.2 pre-installed managed by Microsoft (see [DockerHub](https://hub.docker.com/_/microsoft-powershell){:target="_blank"} for more info).
 
 Safe the following Dockerfile as `Linux.Dockerfile`:
 
@@ -62,7 +62,7 @@ RUN $ProgressPreference = 'SilentlyContinue' ; `
 ENTRYPOINT [ "/bin/bash", "-c", "./config.sh --unattended --replace && ./run.sh" ]
 ```
 
-As you can see, I preselected some things to install like the Az modules, Pester and PSScriptAnalyzer. Now to build the image:
+As you can see, I preselected some things to install like the Az modules, Pester and PSScriptAnalyzer. Also, the dotnet sdk is installed in case you need it (e.g. deploy Azure Functions). Now to build the image:
 
 ```sh
 docker build --force-rm -t azd-ubuntu1804-pwsh6.2.0 -f Linux.Dockerfile .
@@ -72,7 +72,7 @@ docker build --force-rm -t azd-ubuntu1804-pwsh6.2.0 -f Linux.Dockerfile .
 
 ### Windows
 
-The Windows image is based on `mcr.microsoft.com/powershell:6.2.0-windowsservercore-1809` which is a Windows Server 2019 / 1809 image with PowerShell Core 6.2 pre-installed managed by Microsoft (see [DockerHub](https://hub.docker.com/_/microsoft-powershell) for more info).
+The Windows image is based on `mcr.microsoft.com/powershell:6.2.0-windowsservercore-1809` which is a Windows Server 2019 / 1809 image with PowerShell Core 6.2 pre-installed managed by Microsoft (see [DockerHub](https://hub.docker.com/_/microsoft-powershell){:target="_blank"} for more info).
 
 Safe the following Dockerfile as `Windows.Dockerfile`:
 
@@ -117,7 +117,7 @@ RUN $ProgressPreference = 'SilentlyContinue' ; `
 ENTRYPOINT [ "C:\\Windows\\system32\\cmd.exe", "/C", "pwsh -f .\\DnsFix.ps1 -nol -noni -nop && .\\config.cmd --unattended --replace && .\\run.cmd" ]
 ```
 
-Again, as with the Linux image, I preselected some things to install like the Az modules, Pester and PSScriptAnalyzer. There is also a `DnsFix.ps1` that is copied in the image to [workaround an issue with Azure Container Instances and Windows containers](https://stackoverflow.com/questions/55933295/unable-to-do-dns-lookup-in-azure-container-instance-windows-container){:target="_blank"}. I've hit this issue myself hence the inclusion of this fix (have the container make use of google dns servers). Make sure you save the following as `DnsFix.ps1` in the same folder as you saved the dockerfile.
+Again, as with the Linux image, I preselected some things to install like the Az modules, Pester, PSScriptAnalyzer and the dotnet sdk. There is also a `DnsFix.ps1` that is copied in the image to [workaround an issue with Azure Container Instances and Windows containers](https://stackoverflow.com/questions/55933295/unable-to-do-dns-lookup-in-azure-container-instance-windows-container){:target="_blank"}. I've hit this issue myself hence the inclusion of this fix (have the container make use of google dns servers). Make sure you save the following as `DnsFix.ps1` in the same folder as you saved the dockerfile.
 
 ```powershell
 # this is a workaround for dns issues with Windows Containers in ACI
@@ -131,22 +131,24 @@ Now to build the image:
 docker build --force-rm -t azd-windows1809-pwsh6.2.0 -f Windows.Dockerfile .
 ```
 
+> Note that the Modules downloaded for Windows are shared between Windows PowerShell and PowerShell. Some additional configuration is done to make sure this Module path is available to both. The reason for this is that the Azure PowerShell task on Windows targets Windows PowerShell by default until [this issue](https://github.com/microsoft/azure-pipelines-tasks/issues/10328){:target="_blank"} is fixed.
+
 ## Running locally
 
-The image requires a PAT token to connect with Azure DevOps. See the [documentation](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops) on how to acquire one.
+The image requires a PAT token to connect with Azure DevOps. See the [documentation](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops){:target="_blank"} on how to acquire one.
 
 To test the resulting image locally run:
 
 ```sh
 PATTOKEN="get a pat token from azure devops"
-docker run --rm -it -e VSTS_AGENT_INPUT_URL=https://dev.azure.com/<MyOrchName> -e VSTS_AGENT_INPUT_AUTH=pat -e VSTS_AGENT_INPUT_TOKEN=$PATTOKEN -e VSTS_AGENT_INPUT_POOL=<MyPoolName> -e VSTS_AGENT_INPUT_AGENT=agent-0 --user azd:azd azd-ubuntu1804-pwsh6.2.0
+docker run --rm -it -e VSTS_AGENT_INPUT_URL=https://dev.azure.com/<MyOrch> -e VSTS_AGENT_INPUT_AUTH=pat -e VSTS_AGENT_INPUT_TOKEN=$PATTOKEN -e VSTS_AGENT_INPUT_POOL=<MyPoolName> -e VSTS_AGENT_INPUT_AGENT=agent-0 --user azd:azd azd-ubuntu1804-pwsh6.2.0
 ```
 
 ## Publish container image to ACR
 
-This blog assumes an Azure Container Registry is already created. See the [guides](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-portal) on how to handle this task if not already created.
+This blog assumes an Azure Container Registry is already created. See the [guides](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-portal){:target="_blank"} on how to handle this task if not already created.
 
-To publish the just created image to Azure Container Registry, make sure that the registry is enabled for [admin access](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-authentication#admin-account) so you have a username and password to authenticate to it.
+To publish the just created image to Azure Container Registry, make sure that the registry is enabled for [admin access](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-authentication#admin-account){:target="_blank"} so you have a username and password to authenticate to it.
 
 Login and provide the username and password:
 
@@ -442,10 +444,10 @@ New-AzResourceGroupDeployment -ResourceGroupName <resourcegroup> -TemplateFile .
 
 Some caveats I've found when working with ACI:
 
-* Note you can enable Managed Identity by setting the `assignManagedIdentity` parameter to `true`. The template will output the principalId of the resulting identity so you can assign it a Role on a certain scope (subscription / resource group). Note that [Managed Identity for ACI](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-managed-identity) is in preview at this time.
+* Note you can enable Managed Identity by setting the `assignManagedIdentity` parameter to `true`. The template will output the principalId of the resulting identity so you can assign it a Role on a certain scope (subscription / resource group). Note that [Managed Identity for ACI](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-managed-identity){:target="_blank"} is in preview at this time.
 * Preliminary tests with Managed Identity did not work. The metadata endpoint http://169.254.169.254 was not available from within the container
 * Managed Identity is not available at this time on Windows Container Instances.
-* Windows Container Groups can only contain 1 container. Old [issue](https://github.com/MicrosoftFeedback/aci-issues/issues/10) but still the case. The template enforces a count of 1 in case of Windows instead of throwing an error. Once this limitation is lifted, the template if condition can be removed.
+* Windows Container Groups can only contain 1 container. Old [issue](https://github.com/MicrosoftFeedback/aci-issues/issues/10){:target="_blank"} but still the case. The template enforces a count of 1 in case of Windows instead of throwing an error. Once this limitation is lifted, the template if condition can be removed.
 * Increasing the amount of containers post deployment by redeploying the template does not work. You need to delete / create a new Container Instance to do this.
 
 ## Using the new Agents
