@@ -1,10 +1,9 @@
 ---
 title:  "AWS Custom Config Rule backed by PowerShell"
-date:   2020-08-01 12:00:00
+date:   2020-08-05 12:00:00
 categories: ["AWS", "PowerShell"]
 tags: ["AWS", "PowerShell"]
 excerpt_separator: <!--more-->
-hidden: true
 ---
 
 [AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html){:target="_blank"} allow you to evaluate the configuration settings of AWS resources during creation, update, deletions of such resources or on a schedule. They are used to audit resources for compliance with some defined policy. They don't prevent you from deploying in-compliant resources as this is the realm of [service control policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_type-auth.html){:target="_blank"}.
